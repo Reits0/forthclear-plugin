@@ -1,0 +1,32 @@
+{
+  "name": "forthclear",
+  "displayName": "ForthClear",
+  "version": "1.0.0",
+  "description": "Search surplus and overstock inventory, request bulk quotes, and manage a ForthClear buyer or seller account.",
+  "author": {
+    "name": "ForthClear",
+    "email": "info@forthclear.io"
+  },
+  "publisher": "Forthsuite",
+  "homepage": "https://forthclear.io",
+  "repository": "https://github.com/Reits0/forthclear-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "keywords": [
+    "forthclear",
+    "surplus",
+    "overstock",
+    "liquidation",
+    "wholesale",
+    "b2b",
+    "marketplace",
+    "quotes"
+  ],
+  "category": "integrations",
+  "tags": ["surplus", "wholesale", "b2b", "mcp"],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "minClientVersions": {
+    "cursor": "3.13.0"
+  }
+}
