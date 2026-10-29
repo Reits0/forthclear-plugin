@@ -16,13 +16,15 @@ this repo is an API key, client secret, or token.
 
 ## Install
 
-Submit or install this repository from the Cursor marketplace. After install,
-open the plugin and connect **ForthClear**. The host runs OAuth 2.1
+To try the plugin before a marketplace listing, clone this repo and copy its
+contents into `~/.cursor/plugins/local/forthclear`. Reload Cursor, then confirm
+**ForthClear** appears in Customize. Open the plugin and connect **ForthClear**.
+The host runs OAuth 2.1
 (authorization code, S256 PKCE, dynamic client registration) in the browser.
 Sign in on `app.forthclear.io` and approve only the scopes you want.
 
-To try it before it is listed, clone this repo and load it as a local plugin,
-then reload the window.
+If the plugin is listed in the Cursor Marketplace later, you can install it
+there instead.
 
 ## What works without an account
 
