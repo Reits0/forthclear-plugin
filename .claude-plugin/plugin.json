@@ -1,0 +1,21 @@
+{
+  "name": "forthclear",
+  "displayName": "ForthClear",
+  "version": "1.0.0",
+  "description": "Find surplus lots, inspect seller terms and compare inventory from an agent. Account actions require the relevant authorization.",
+  "author": {
+    "name": "ForthClear",
+    "email": "info@forthclear.io"
+  },
+  "homepage": "https://forthclear.io",
+  "repository": "https://github.com/Reits0/forthclear-plugin",
+  "license": "MIT",
+  "keywords": [
+    "surplus",
+    "wholesale",
+    "liquidation",
+    "inventory",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.json"
+}
