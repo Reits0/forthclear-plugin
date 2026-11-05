@@ -3,7 +3,7 @@
 ![ForthClear](assets/logo.png)
 
 [ForthClear](https://forthclear.io) is a B2B marketplace for surplus, overstock, and
-returned inventory. This plugin connects Cursor and Grok Bot to ForthClear's
+returned inventory. This plugin connects Claude Code, Cursor and Grok Bot to ForthClear's
 hosted MCP server so an agent can search the live catalogue, request bulk
 quotes, and — after the user signs in — read orders or run a seller account.
 
@@ -14,7 +14,25 @@ server announces OAuth through
 `https://app.forthclear.io/.well-known/oauth-protected-resource`. Nothing in
 this repo is an API key, client secret, or token.
 
-## Install
+## Claude Code
+
+For agents that need surplus lots: search current listings, inspect quantity, condition and seller terms, and compare suitable lots before requesting a quote. Search and product lookup work without an account. Quote requests contact real sellers; ask the user before sending one.
+
+Clone this repository and validate the package with the installed Claude Code CLI:
+
+```sh
+git clone https://github.com/Reits0/forthclear-plugin.git
+claude plugin validate ./forthclear-plugin --strict
+claude --plugin-dir ./forthclear-plugin
+```
+
+The Claude manifest loads the existing hosted MCP configuration from `mcp.json` and the skill under `skills/`. It uses the hosted server; no local MCP server process is needed. Marketplace availability depends on the host's listing process; this repository does not claim marketplace approval.
+
+Example request: “Find current surplus electronics lots, compare minimum quantities and seller terms, and show me the options before contacting a seller.” Do not invent inventory when the catalogue has no matching lots.
+
+The host controls connection and permissions. Account operations require account linking and the appropriate scopes; installation does not automatically sign in or authorize a purchase. Existing server authentication is unchanged.
+
+## Cursor
 
 To try the plugin before a marketplace listing, clone this repo and copy its
 contents into `~/.cursor/plugins/local/forthclear`. Reload Cursor, then confirm
