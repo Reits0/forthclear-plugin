@@ -1,0 +1,11 @@
+{
+  "name": "forthclear",
+  "version": "1.0.0",
+  "description": "Search live wholesale surplus lots, compare quantities and seller terms, and request bulk quotes through ForthClear.",
+  "mcpServers": {
+    "forthclear": {
+      "httpUrl": "https://app.forthclear.io/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

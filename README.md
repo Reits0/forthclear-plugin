@@ -3,7 +3,7 @@
 ![ForthClear](assets/logo.png)
 
 [ForthClear](https://forthclear.io) is a B2B marketplace for surplus, overstock, and
-returned inventory. This plugin connects Claude Code, Cursor and Grok Bot to ForthClear's
+returned inventory. This plugin connects Gemini CLI, Claude Code, Cursor and Grok Bot to ForthClear's
 hosted MCP server so an agent can search the live catalogue, request bulk
 quotes, and — after the user signs in — read orders or run a seller account.
 
@@ -13,6 +13,24 @@ as remote streamable HTTP, the same shape as other marketplace plugins. The
 server announces OAuth through
 `https://app.forthclear.io/.well-known/oauth-protected-resource`. Nothing in
 this repo is an API key, client secret, or token.
+
+## Gemini CLI
+
+```sh
+gemini extensions install https://github.com/Reits0/forthclear-plugin
+```
+
+The extension connects directly to ForthClear's hosted MCP server. Search and
+product details work without an account. Use `/mcp auth forthclear` when you
+want to connect your own buyer or seller account. Confirm any quote request or
+account change before the agent submits it.
+
+Example: "Find surplus electronics lots and compare minimum quantities and
+seller terms. Show me the options before contacting a seller."
+
+The repository carries the `gemini-cli-extension` topic for Google's gallery
+crawler. Publication in the gallery depends on Google's validation and crawl;
+this README does not claim that the listing has been approved.
 
 ## Claude Code
 
