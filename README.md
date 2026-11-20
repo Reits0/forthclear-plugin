@@ -14,6 +14,20 @@ server announces OAuth through
 `https://app.forthclear.io/.well-known/oauth-protected-resource`. Nothing in
 this repo is an API key, client secret, or token.
 
+## Compare a lot before contacting the seller
+
+Try this request after connecting the plugin:
+
+"Find overstock kitchenware. Show up to three current lots with their unit
+prices, available quantities, minimum orders, condition and shipping terms.
+Read each listing's details and flag disagreements between the description
+and quantity fields. Show me what is missing before I contact a seller."
+
+[Buyer walkthrough](examples/buyer-walkthrough.md) explains the comparison
+and provides a copyable prompt. The [offline lot-cost example](examples/README.md)
+calculates the cost per ordered and usable unit from numbers you supply.
+It includes fictional inputs and tests, and makes no network calls.
+
 ## Gemini CLI
 
 ```sh
@@ -88,8 +102,10 @@ password or token into the chat.
 ## Tools
 
 These are the tools the server advertises. Prices on catalogue, quote, and
-listing tools are integer cents. `bulk_update_listings` `price_set` is a USD
-dollar amount.
+listing tools are integer cents. `bulk_update_listings` with `price_set` takes
+`price_cents`: `5000` means USD 50.00 per unit. The deprecated `value_usd`
+argument explicitly uses dollars. `value` is for percent or minimum-quantity
+modes and is not accepted for `price_set`.
 
 | Tool | Access | What it does |
 | --- | --- | --- |

@@ -1,0 +1,8 @@
+{
+  "currency": "USD",
+  "ordered_units": 200,
+  "unit_price": "3.00",
+  "freight_total": "120.00",
+  "other_costs_total": "30.00",
+  "usable_units": 150
+}
