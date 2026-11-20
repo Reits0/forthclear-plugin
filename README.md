@@ -7,7 +7,8 @@ returned inventory. This plugin connects Gemini CLI, Claude Code, Cursor and Gro
 hosted MCP server so an agent can search the live catalogue, request bulk
 quotes, and — after the user signs in — read orders or run a seller account.
 
-The repository is the plugin. It has no application code and no credentials.
+This repository contains plugin configuration and small usage examples.
+The marketplace application runs on ForthClear's servers.
 `mcp.json` points at `https://app.forthclear.io/mcp`. Cursor treats `type: http`
 as remote streamable HTTP, the same shape as other marketplace plugins. The
 server announces OAuth through
