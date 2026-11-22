@@ -1,7 +1,7 @@
 {
   "name": "forthclear",
   "displayName": "ForthClear",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find surplus lots, inspect seller terms and compare inventory from an agent. Account actions require the relevant authorization.",
   "author": {
     "name": "ForthClear",
