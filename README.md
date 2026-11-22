@@ -88,8 +88,10 @@ password or token into the chat.
 ## Tools
 
 These are the tools the server advertises. Prices on catalogue, quote, and
-listing tools are integer cents. `bulk_update_listings` `price_set` is a USD
-dollar amount.
+listing tools are integer cents. `bulk_update_listings` with `price_set` takes
+`price_cents`: `5000` means USD 50.00 per unit. The deprecated `value_usd`
+still accepts a dollar amount, and `value` is used only by the percent and
+`moq_set` modes; it is not accepted for `price_set`.
 
 | Tool | Access | What it does |
 | --- | --- | --- |
