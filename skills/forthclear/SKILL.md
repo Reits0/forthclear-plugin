@@ -34,11 +34,11 @@ tool before submitting it again. These tools do not take an idempotency key.
 ## Prices and ids
 
 Search, product details, quote `target_price`, listing `price_per_unit`, and
-pricing recommendations use integer cents. For `bulk_update_listings`,
-`price_set` takes `price_cents` as integer cents: 5000 means USD 50.00.
-The deprecated `value_usd` argument explicitly uses dollars. The percent modes
-take a percent in `value`, and `moq_set` takes an integer minimum quantity in
-`value`. Do not pass `value` with `price_set`. Say which unit you are using.
+pricing recommendations use integer cents. So does `bulk_update_listings`:
+`price_set` takes `price_cents` as integer cents (5000 means USD 50.00 per
+unit). The percent modes take a percent and `moq_set` takes an integer minimum
+quantity, both in `value`. Do not pass `value` with `price_set`, and do not use
+the deprecated `value_usd`. Say which unit you are using.
 
 Catalogue tools identify listings as `product_<n>`. `bulk_update_listings`
 takes integer product ids. Quote ids and order ids are integers.
@@ -133,7 +133,7 @@ These need a connected seller. Read scopes do not grant write.
   or `decline`. The buyer is notified. Confirm the quote id, action, and any
   counter price before sending. `seller:write`.
 - `bulk_update_listings` — replace price or minimum order quantity on up to
-  200 listings. Modes: `price_set` (USD dollars), `price_percent_increase`,
+  200 listings. Modes: `price_set` (`price_cents`, integer cents), `price_percent_increase`,
   `price_percent_decrease`, `moq_set`. Previous values are replaced
   (`destructiveHint`). Show the ids and the new values and wait for
   authorization. A request to "optimize prices" is not permission to change
