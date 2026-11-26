@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "forthclear": {
+      "type": "http",
+      "url": "https://app.forthclear.io/mcp"
+    }
+  }
+}

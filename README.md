@@ -5,7 +5,7 @@
 [ForthClear](https://forthclear.io) is a B2B marketplace for surplus, overstock, and
 returned inventory. This plugin connects Gemini CLI, Claude Code, Cursor and Grok Bot to ForthClear's
 hosted MCP server so an agent can search the live catalogue, request bulk
-quotes, and — after the user signs in — read orders or run a seller account.
+quotes, and, after the user signs in, read orders or run a seller account.
 
 This repository contains plugin configuration and small usage examples.
 The marketplace application runs on ForthClear's servers.
@@ -76,6 +76,36 @@ Sign in on `app.forthclear.io` and approve only the scopes you want.
 
 If the plugin is listed in the Cursor Marketplace later, you can install it
 there instead.
+
+## Use with VS Code, Perplexity, and Cline
+
+The hosted server is at `https://app.forthclear.io/mcp`. Search and product details work without an account. To use account tools, sign in with OAuth 2.1 or use an API key.
+
+Buyer keys are created at <https://app.forthclear.io/account-settings> and sent in the `X-Agent-Token` header. Seller keys are created at <https://app.forthclear.io/seller/settings> and sent in the `X-MCP-API-Key` header. Do not paste a key into the chat.
+
+A root `.mcp.json` file is included for directories that look for that name. It has the same content as `mcp.json`. Cline can follow [llms-install.md](llms-install.md).
+
+### VS Code
+
+[Install in VS Code](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522forthclear%2522%252C%2522type%2522%253A%2522http%2522%252C%2522url%2522%253A%2522https%253A%252F%252Fapp.forthclear.io%252Fmcp%2522%257D). The link opens the server details page so you can review it before adding it.
+
+If the link does not open, add this MCP server in VS Code:
+
+```json
+{
+  "name": "forthclear",
+  "type": "http",
+  "url": "https://app.forthclear.io/mcp"
+}
+```
+
+### Perplexity
+
+On a Pro, Max or Enterprise plan, open Plugins, then Add custom, then Add MCP connector, and choose Remote. Enter `https://app.forthclear.io/mcp`. Choose OAuth, or an API key if you prefer. On Enterprise, an admin may need to allow custom connectors first.
+
+### Cline
+
+Cline can install this server from this repository by reading the README and [llms-install.md](llms-install.md). The server is remote, so Cline does not need to start a local process. Point it at `https://app.forthclear.io/mcp`.
 
 ## What works without an account
 
